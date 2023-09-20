@@ -6,8 +6,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest]
-        build_type: [Release]
+        os: [windows-latest, macos-latest]
+        build_type: [RelWithDebInfo]
         enable_ui: [on]
     steps:
     - uses: actions/checkout@v3
@@ -61,5 +61,4 @@ jobs:
       with:
         name: aseprite
         path: |
-          D:/a/aseprite/aseprite/build/bin/data
-          D:/a/aseprite/aseprite/build/bin/aseprite.dmg
+          D:/a/aseprite/aseprite/build/bin/
